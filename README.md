@@ -22,6 +22,7 @@ dnsmasq (Split DNS — solves NAT loopback issue)
 ```
 ---
 🔧 Hardware
+
 Component	Details
 Device	Samsung 355V4C (2013)
 CPU	AMD A8-4500M @ 1.90 GHz
