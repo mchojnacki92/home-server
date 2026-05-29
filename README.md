@@ -33,38 +33,38 @@ Network	Qualcomm Atheros AR9485 (WiFi)
 
 ---
 🚀 Services
-Immich — Self-Hosted Photo Cloud
-Google Photos alternative, runs in Docker
-Accessible at `https://<your-domain>`
-Containers: `immich_server`, `immich_postgres`, `immich_redis`, `immich_machine_learning`
-Nginx — Reverse Proxy
-Terminates SSL (Let's Encrypt)
-Forwards HTTPS → Immich on internal port 2283
-WebSocket support for real-time sync
-Security headers: HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
-Fail2ban — Intrusion Prevention
-Bans IPs after 5 failed attempts within 10 minutes (1h ban)
-Active jails: `sshd`, `nginx-http-auth`
-Tailscale — VPN
-Secure remote SSH access without exposing port 22 to the internet
-WireGuard-based, zero-config
-DuckDNS — Dynamic DNS
-Updates public IP every 5 minutes via cron job
-Keeps domain pointing to dynamic ISP IP
-dnsmasq — Split DNS
-Solves NAT loopback (router doesn't support hairpin NAT)
-Local devices resolve the domain directly to the server's LAN IP
+-Immich — Self-Hosted Photo Cloud
+-Google Photos alternative, runs in Docker
+-Accessible at `https://<your-domain>`
+-Containers: `immich_server`, `immich_postgres`, `immich_redis`, `immich_machine_learning`
+-Nginx — Reverse Proxy
+-Terminates SSL (Let's Encrypt)
+-Forwards HTTPS → Immich on internal port 2283
+-WebSocket support for real-time sync
+-Security headers: HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
+-Fail2ban — Intrusion Prevention
+-Bans IPs after 5 failed attempts within 10 minutes (1h ban)
+-Active jails: `sshd`, `nginx-http-auth`
+-Tailscale — VPN
+-Secure remote SSH access without exposing port 22 to the internet
+-WireGuard-based, zero-config
+-DuckDNS — Dynamic DNS
+-Updates public IP every 5 minutes via cron job
+-Keeps domain pointing to dynamic ISP IP
+-dnsmasq — Split DNS
+-Solves NAT loopback (router doesn't support hairpin NAT)
+-Local devices resolve the domain directly to the server's LAN IP
 ---
 🔒 Security
-Layer	Tool	Status
-Firewall	UFW	✅ Active (443, 22)
-Brute-force protection	Fail2ban	✅ Active
-HTTPS	Let's Encrypt + Nginx	✅ A+ (SSL Labs)
-Security headers	Nginx	✅ A (SecurityHeaders.com)
-Remote access	Tailscale VPN	✅ Active
-Auto security updates	unattended-upgrades	✅ Active
-SSL Labs score: A+
-SecurityHeaders.com score: A
+-Layer	Tool	Status
+-Firewall	UFW	✅ Active (443, 22)
+-Brute-force protection	Fail2ban	✅ Active
+-HTTPS	Let's Encrypt + Nginx	✅ A+ (SSL Labs)
+-Security headers	Nginx	✅ A (SecurityHeaders.com)
+-Remote access	Tailscale VPN	✅ Active
+-Auto security updates	unattended-upgrades	✅ Active
+-SSL Labs score: A+
+-SecurityHeaders.com score: A
 ---
 📁 Repository Structure
 ```
@@ -88,12 +88,12 @@ homeserver/
 ```
 ---
 ⚙️ Setup Guide
-Prerequisites
-Ubuntu 24.04 LTS
+-Prerequisites
+-Ubuntu 24.04 LTS
 - Docker (with Compose v2 plugin)
-A domain (e.g. DuckDNS)
-Router with port forwarding (443)
-Quick Start
+-A domain (e.g. DuckDNS)
+-Router with port forwarding (443)
+-Quick Start
 ```bash
 # 1. Clone the repo
 git clone https://github.com/YOUR_USERNAME/homeserver.git
@@ -119,33 +119,29 @@ sudo chmod +x /usr/local/bin/update-duckdns.sh
 ```
 ---
 🗺️ Roadmap
-
-[x] Immich photo cloud (Docker)
-
-[x] Nginx reverse proxy with SSL (A+ rating)
-
-[x] Fail2ban brute-force protection
-
-[x] Tailscale VPN remote access
-[x] DuckDNS dynamic DNS
-[x] Split DNS with dnsmasq
-[x] Security headers (HSTS, etc.)
-[x] Unattended security upgrades
-[ ] External 2TB drive for photo storage
-[ ] Immich database automated backup
-[ ] Seafile (file sync like Dropbox)
-[ ] GitHub Actions — automated config linting
+-[x] Immich photo cloud (Docker)
+-[x] Nginx reverse proxy with SSL (A+ rating)
+-[x] Fail2ban brute-force protection
+-[x] Tailscale VPN remote access
+-[x] DuckDNS dynamic DNS
+-[x] Split DNS with dnsmasq
+-[x] Security headers (HSTS, etc.)
+-[x] Unattended security upgrades
+-[ ] External 2TB drive for photo storage
+-[ ] Immich database automated backup
+-[ ] Seafile (file sync like Dropbox)
+-[ ] GitHub Actions — automated config linting
 ---
 📚 What I Learned
-Reverse proxy setup and SSL termination with Nginx
-Docker networking and container orchestration
-Network security layers (UFW, Fail2ban, VPN)
-Dynamic DNS and NAT loopback troubleshooting
-Split DNS configuration with dnsmasq
-Linux system hardening on resource-constrained hardware
+-Reverse proxy setup and SSL termination with Nginx
+-Docker networking and container orchestration
+-Network security layers (UFW, Fail2ban, VPN)
+-Dynamic DNS and NAT loopback troubleshooting
+-Split DNS configuration with dnsmasq
+-Linux system hardening on resource-constrained hardware
 ---
 ⚠️ Disclaimer
-This repo contains sanitized configuration files. All secrets (tokens, IPs, passwords) have been removed and replaced with placeholders. See `.env.example` for required variables.
+-This repo contains sanitized configuration files. All secrets (tokens, IPs, passwords) have been removed and replaced with placeholders. See `.env.example` for required variables.
 ---
 📄 License
 MIT — feel free to use this as a reference for your own home server setup.
