@@ -119,9 +119,13 @@ sudo chmod +x /usr/local/bin/update-duckdns.sh
 ```
 ---
 🗺️ Roadmap
+
 [x] Immich photo cloud (Docker)
+
 [x] Nginx reverse proxy with SSL (A+ rating)
+
 [x] Fail2ban brute-force protection
+
 [x] Tailscale VPN remote access
 [x] DuckDNS dynamic DNS
 [x] Split DNS with dnsmasq
