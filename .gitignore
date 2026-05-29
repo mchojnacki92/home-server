@@ -1,0 +1,73 @@
+# =====================
+# SECRETS — NEVER COMMIT
+# =====================
+.env
+*.env
+*.token
+*.secret
+*.key
+*.pem
+*.crt
+*.p12
+
+# DuckDNS
+duckdns.conf
+update-duckdns-real.sh
+
+# SSH keys
+id_rsa
+id_ed25519
+*.pub
+authorized_keys
+
+# =====================
+# DOCKER
+# =====================
+# Never commit real docker-compose with passwords
+# Use docker-compose.yml (sanitized) + .env for secrets
+docker-compose.override.yml
+
+# Immich data directories (these stay on server)
+model-cache/
+upload/
+library/
+thumbs/
+encoded-video/
+profile/
+backups/
+
+# =====================
+# NGINX SSL CERTIFICATES
+# =====================
+/etc/letsencrypt/
+letsencrypt/
+*.crt
+*.key
+fullchain.pem
+privkey.pem
+
+# =====================
+# LOGS
+# =====================
+*.log
+logs/
+/var/log/
+
+# =====================
+# SYSTEM
+# =====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# =====================
+# BACKUPS
+# =====================
+*.sql
+*.sql.gz
+*.dump
+backup-*.tar.gz

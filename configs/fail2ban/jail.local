@@ -1,0 +1,24 @@
+# /etc/fail2ban/jail.local
+# Fail2ban configuration — sanitized for public repo
+
+[DEFAULT]
+bantime  = 1h
+findtime = 10m
+maxretry = 5
+
+# Send notifications (optional — set your email)
+# destemail = your@email.com
+# sendername = Fail2ban
+# mta = sendmail
+# action = %(action_mwl)s
+
+[sshd]
+enabled  = true
+port     = ssh
+logpath  = %(sshd_log)s
+backend  = %(sshd_backend)s
+
+[nginx-http-auth]
+enabled  = true
+port     = http,https
+logpath  = %(nginx_error_log)s
