@@ -83,9 +83,8 @@ dnsmasq (Split DNS — solves NAT loopback issue)
 | Remote access | Tailscale VPN | ✅ Active |
 | Auto security updates | unattended-upgrades | ✅ Active |
 
-**SSL Labs score: A+**
-
-**SecurityHeaders.com score: A**
+[![SSL Rating](https://img.shields.io/badge/SSL%20Labs-A%2B-brightgreen?style=flat-square&logo=letsencrypt)](https://www.ssllabs.com/ssltest/)
+[![Security Headers](https://img.shields.io/badge/Security%20Headers-A-brightgreen?style=flat-square&logo=shield)](https://securityheaders.com/)
 
 ---
 
